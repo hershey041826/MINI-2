@@ -1,0 +1,150 @@
+ img {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  #main_menu {
+    background: #043927;
+  }
+
+  #mainMenu .nav-link {
+    color: #FBFCFA;
+  }
+  
+  #mainMenu .nav-link:hover {
+    background: #FBFCFA;
+    color: #043927;
+    border-radius: 5px;
+  }
+  #mainMenu .nav-link.active {
+    background: #043927;
+    color: #FBFCFA;
+    border-radius: 5px;
+  } */
+
+  /* ########## Search */
+  body {
+    background-image: linear-gradient(to right , #cb2d3e , #ef473a);
+}
+
+.searchBox {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    transform:  translate(-100%,50%);
+    background: #050301;
+    height: 40px;
+    border-radius: 40px;
+    padding: 0px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: #043927;
+  color : #FBFCFA;
+}
+
+.searchButton {
+    color: #050301;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FBFCFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: #050301;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: #FBFCFA;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+@media screen and (max-width: 480px) {
+    .searchBox {
+        position: absolute;
+        top: 7%;
+        left: 50%;
+        transform:  translate(-30%,50%);
+        background: #050301;
+        height: 40px;
+        border-radius: 40px;
+        padding: 0px;
+    }
+}
+
+
+/* ########### nigt & day mode */
+
+body {
+    transition: 1s;
+    }
+    .night-toggle {
+    width: 33px;
+    height: 33px;
+    right: 300px;
+    top: 30px;
+    position: absolute;
+    }
+    .night-toggle:hover{
+      cursor: pointer;
+    }
+    .moon {
+      background-color: #FBFCFA;
+      box-shadow: -6px 1px 0 3px #275e8e;
+      border-left:3px solid #27476D;
+      border-radius:50%;
+      width: 20px;
+      height: 20px;
+      margin-left:8px;
+      margin-top:0px;
+      transition: 2s;
+    }
+    .sun {
+      background-color: #fdd462;
+      box-shadow: 2px 0px 0px 1px #D19C29;
+      border-radius:50%;
+      width: 26px;
+      height: 26px;
+      transition: 2s;
+    }
+    @media screen and (max-width: 768px) {
+        .night-toggle {
+            right: 20px;
+            top: 10px; 
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .night-toggle {
+            right: 10px;
+            top: 10px; 
+        }
+    }
+
+    
+   
+     
