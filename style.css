@@ -30,19 +30,16 @@
 .searchBox {
     position: absolute;
     top: 20%;
-    left: 60%;
+    left: 55%;
     transform:  translate(-100%,50%);
-    background: #050301;
+    background: #FBFCFA;
     height: 40px;
     border-radius: 40px;
     padding: 0px;
 
 }
 
-.searchBox:hover > .searchInput {
-    width: 240px;
-    padding: 0 6px;
-}
+
 
 .searchBox:hover > .searchButton {
   background: #043927;
@@ -64,15 +61,15 @@
 
 .searchInput {
     border:none;
-    background: #050301;
+    background: #FBFCFA;
     outline:none;
     float:left;
     padding: 0;
-    color: #FBFCFA;
+    color: #050301;
     font-size: 16px;
-    transition: 0.4s;
     line-height: 40px;
-    width: 0px;
+    width: 240px;
+    padding: 0 8px;
 
 }
 
@@ -84,67 +81,109 @@
 }
 
 @media screen and (max-width: 480px) {
+  .searchInput {width: 150px;}}
+
+@media screen and (max-width: 480px) {
     .searchBox {
         position: absolute;
         top: 7%;
-        left: 50%;
-        transform:  translate(-30%,50%);
-        background: #050301;
+        left: 40%;
+        transform:  translate(-10%,50%);
+        background: #FBFCFA;
         height: 40px;
         border-radius: 40px;
         padding: 0px;
     }
 }
 
+/* ### dark & light mode */
 
-/* ########### nigt & day mode */
+.toggle {
+  font-size: 1.5rem;
+  border: .125em solid currentColor;
+  border-radius: 2em;
+  cursor: pointer;
+  display: block;
+  height: 2em;
+  position: relative;
+  width: 7rem;
+  margin-right: 10rem;
+  background-color: #050301;
+}
+.toggle span {
+  background-color: #FBFCFA;
+  border-radius: 2em;
+  display: block;
+  height: 1.6em;
+  left: .25em;
+  overflow: hidden;
+  position: absolute;
+  top: .10em;
+  text-indent: -9999px;
+  transition: left .25s;
+  width: 3rem;
+  z-index: 2;
+}
 
+.toggle::before,
+.toggle::after {
+  content: '';
+  display: block;
+  border-radius: 1em;
+  position: absolute;
+  z-index: 1;
+}
+
+.toggle::after {
+  box-shadow: .25em .25em #5901d8;
+  height: 1.125em;
+  right: .9em;
+  top: .125em;
+  width: 1.125em;
+}
+
+.toggle::before {
+  background-color: #ffc409;
+  height: .625em;
+  outline: .25em dotted #ffc409;
+  outline-offset: .125em;
+  left: .7em;
+  top: .7em;
+  width: .625em;
+}
+
+input:checked ~ .toggle span {
+  left: 2em;
+}
+
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
 body {
-    transition: 1s;
-    }
-    .night-toggle {
-    width: 33px;
-    height: 33px;
-    right: 300px;
-    top: 30px;
-    position: absolute;
-    }
-    .night-toggle:hover{
-      cursor: pointer;
-    }
-    .moon {
-      background-color: #FBFCFA;
-      box-shadow: -6px 1px 0 3px #275e8e;
-      border-left:3px solid #27476D;
-      border-radius:50%;
-      width: 20px;
-      height: 20px;
-      margin-left:8px;
-      margin-top:0px;
-      transition: 2s;
-    }
-    .sun {
-      background-color: #fdd462;
-      box-shadow: 2px 0px 0px 1px #D19C29;
-      border-radius:50%;
-      width: 26px;
-      height: 26px;
-      transition: 2s;
-    }
-    @media screen and (max-width: 768px) {
-        .night-toggle {
-            right: 20px;
-            top: 10px; 
-        }
-    }
-    
-    @media screen and (max-width: 480px) {
-        .night-toggle {
-            right: 10px;
-            top: 10px; 
-        }
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .25s;
+  color: #1e1e1e;
+  background: linear-gradient(to bottom right, #eefff4 25%, #043927 50%, #050301 75%, #043927);
+  background-size: 300% 300%;
+  background-position: top left;
+  transition: background-position .5s;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
 
-    
+
+body:has(#darkmode-toggle:checked) {
+  background-position: 100% 100%;
+  color: #d0d0d0;
+}
    
      
