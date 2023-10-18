@@ -4,7 +4,7 @@
   }
   
   #main_menu {
-    background: #043927;
+    background: #ff6700;
   }
 
   #mainMenu .nav-link {
@@ -22,91 +22,20 @@
     border-radius: 5px;
   } */
 
-  /* ########## Search */
-  body {
-    background-image: linear-gradient(to right , #cb2d3e , #ef473a);
-}
-
-.searchBox {
-    position: absolute;
-    top: 20%;
-    left: 55%;
-    transform:  translate(-100%,50%);
-    background: #FBFCFA;
-    height: 40px;
-    border-radius: 40px;
-    padding: 0px;
-
-}
-
-
-
-.searchBox:hover > .searchButton {
-  background: #043927;
-  color : #FBFCFA;
-}
-
-.searchButton {
-    color: #050301;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #FBFCFA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-}
-
-.searchInput {
-    border:none;
-    background: #FBFCFA;
-    outline:none;
-    float:left;
-    padding: 0;
-    color: #050301;
-    font-size: 16px;
-    line-height: 40px;
-    width: 240px;
-    padding: 0 8px;
-
-}
-
-@media screen and (max-width: 620px) {
-.searchBox:hover > .searchInput {
-    width: 150px;
-    padding: 0 6px;
-}
-}
-
-@media screen and (max-width: 480px) {
-  .searchInput {width: 150px;}}
-
-@media screen and (max-width: 480px) {
-    .searchBox {
-        position: absolute;
-        top: 7%;
-        left: 40%;
-        transform:  translate(-10%,50%);
-        background: #FBFCFA;
-        height: 40px;
-        border-radius: 40px;
-        padding: 0px;
-    }
-}
-
 /* ### dark & light mode */
+.search-form {
+    position: relative;
+}
 
 .toggle {
-  font-size: 1.5rem;
+  font-size: 1rem;
   border: .125em solid currentColor;
   border-radius: 2em;
   cursor: pointer;
   display: block;
   height: 2em;
   position: relative;
-  width: 7rem;
+  width: 5rem;
   margin-right: 10rem;
   background-color: #050301;
 }
@@ -121,7 +50,7 @@
   top: .10em;
   text-indent: -9999px;
   transition: left .25s;
-  width: 3rem;
+  width: 2.5rem;
   z-index: 2;
 }
 
@@ -168,7 +97,7 @@ body {
   justify-content: center;
   transition: background-color .25s;
   color: #1e1e1e;
-  background: linear-gradient(to bottom right, #eefff4 25%, #043927 50%, #050301 75%, #043927);
+  background: linear-gradient(to bottom right, #eefff4 25%, #ff6700 50%, #050301 75%, #050301);
   background-size: 300% 300%;
   background-position: top left;
   transition: background-position .5s;
